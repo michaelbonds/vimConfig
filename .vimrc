@@ -1,18 +1,11 @@
 " Modeline and Notes {
 " vim: set foldmarker={,} foldlevel=0 foldmethod=marker spell:
 "
-"                    __ _ _____              _
-"         ___ _ __  / _/ |___ /      __   __(_)_ __ ___
-"        / __| '_ \| |_| | |_ \ _____\ \ / /| | '_ ` _ \
-"        \__ \ |_) |  _| |___) |_____|\ V / | | | | | | |
-"        |___/ .__/|_| |_|____/        \_/  |_|_| |_| |_|
-"            |_|
-"
-"   This is the personal .vimrc file of Steve Francia.
+"   This is the personal .vimrc file of David Hudson. It was
+"   originally based on the personal .vimrc file of Steve Francia.
 "   While much of it is beneficial for general use, I would
 "   recommend picking out the parts you want and understand.
 "
-"   You can find me at http://spf13.com
 " }
 
 " Environment {
@@ -84,7 +77,8 @@
     " General Programming
         if count(g:spf13_bundle_groups, 'programming')
             " Pick one of the checksyntax, jslint, or syntastic
-            Bundle 'scrooloose/syntastic'
+            "Bundle 'scrooloose/syntastic'
+            Bundle 'hallettj/jslint.vim'
             Bundle 'garbas/vim-snipmate'
             Bundle 'spf13/snipmate-snippets'
             " Source support_function.vim to support snipmate-snippets.
@@ -95,9 +89,9 @@
             Bundle 'tpope/vim-fugitive'
             Bundle 'scrooloose/nerdcommenter'
             Bundle 'godlygeek/tabular'
-            if executable('ctags')
-                Bundle 'majutsushi/tagbar'
-            endif
+            "if executable('ctags')
+            "    Bundle 'majutsushi/tagbar'
+            "endif
             Bundle 'Shougo/neocomplcache'
         endif
 
@@ -366,7 +360,7 @@
     " }
 
     " Ctags {
-        set tags=./tags;/,~/.vimtags
+    "   set tags=./tags;/,~/.vimtags
     " }
 
     " AutoCloseTag {
@@ -378,7 +372,7 @@
     " SnipMate {
         " Setting the author var
         " If forking, please overwrite in your .vimrc.local file
-        let g:snips_author = 'Steve Francia <steve.francia@gmail.com>'
+        let g:snips_author = 'David Hudson <im@davidhudson.me>'
     " }
 
     " NerdTree {
